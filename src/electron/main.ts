@@ -35,11 +35,11 @@ const createWindow = () => {
         win.hide()
     })
 
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
     if (process.env.VITE_DEV_SERVER_URL) {
         win.loadURL(process.env.VITE_DEV_SERVER_URL)
     } else {
-        win.loadFile('dist/index.html');
+        win.loadFile('app://./index.html');
     }
 }
 app.whenReady().then(() => {

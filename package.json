@@ -2,16 +2,20 @@
   "name": "electron-veoplayer",
   "private": true,
   "version": "1.0.1",
+  "author": "dinglong",
   "main": "dist-electron/main.js",
   "scripts": {
     "dev": "vite",
+    "build": "vite build",
     "start": "electron .",
-    "build": "vue-tsc && vite build",
+    "builder": "electron-builder",
     "preview": "vite preview"
   },
   "build": {
     "productName": "veoplayer",
-    "appId": "202307101748",
+    "directories": {
+      "output": "dist"
+    },
     "mac": {
       "icon": "./public/static/images/veoplayer_logo.ico"
     },

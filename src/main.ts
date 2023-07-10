@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
+import './style.less'
 import App from './App.tsx'
 const app = createApp(App)
 import { Button as TButton,Input as TInput,Row as TRow,Col as TCol } from 'tdesign-vue-next';
