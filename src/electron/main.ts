@@ -1,11 +1,18 @@
 
-import { app, BrowserWindow,Menu,ipcMain } from "electron"
+import { app, BrowserWindow,Menu,ipcMain,net } from "electron"
+import path from 'path'
+import {playFunc} from "./control"
 const createWindow = () => {
     Menu.setApplicationMenu(null)
+    // playFunc(net)
+
     const win = new BrowserWindow({
         width: 1200,
-        height: 840,
+        height: 850,
+        minHeight:850,
+        minWidth:1200,
         frame: false,
+        icon: path.join(__dirname, '../public/static/images/veoplayer_logo.ico'),
         webPreferences: {
             devTools: true,
             contextIsolation: false,
@@ -28,7 +35,7 @@ const createWindow = () => {
         win.hide()
     })
 
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
     if (process.env.VITE_DEV_SERVER_URL) {
         win.loadURL(process.env.VITE_DEV_SERVER_URL)
     } else {

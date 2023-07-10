@@ -5,5 +5,13 @@ html,body,#app{
   margin: 0;
 }
 html {
-  background: #1a1a1a;
+  background: #181818;
+}
+.index_row{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px !important;
 }
