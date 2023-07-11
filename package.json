@@ -42,7 +42,7 @@
       "installerHeaderIcon": "./public/static/images/veoplayer_logo.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "idea"
+      "shortcutName": "veoplayer"
     }
   },
   "files": [
