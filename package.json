@@ -21,7 +21,12 @@
       "icon": "./public/static/images/veoplayer_logo.ico"
     },
     "win": {
-      "icon": "./public/static/images/veoplayer_logo.ico"
+      "icon": "./public/static/images/veoplayer_logo.ico",
+      "target": [
+        {
+          "target": "nsis"
+        }
+      ]
     },
     "linux": {
       "icon": "./public/static/images/veoplayer_logo.ico"
@@ -40,6 +45,10 @@
       "shortcutName": "idea"
     }
   },
+  "files": [
+    "./dist",
+    "./dist-electron/main.js"
+  ],
   "dependencies": {
     "tdesign-vue-next": "^1.3.10",
     "veoplayer": "1.0.1-beta.1",
