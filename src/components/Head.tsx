@@ -17,7 +17,7 @@ export default defineComponent({
         return () => (
             <div class="head">
                 <div class="logobox">
-                    <img src="/static/images/veoplayer_logo.png" />
+                    <img src="./static/images/veoplayer_logo.png" />
                     <span>veoplayer</span>
                 </div>
                 <div class="middle"></div>

@@ -16,6 +16,7 @@
     "directories": {
       "output": "dist"
     },
+    "files": ["./dist","./dist-electron/main.js"],
     "mac": {
       "icon": "./public/static/images/veoplayer_logo.ico"
     },
