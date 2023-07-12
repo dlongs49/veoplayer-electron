@@ -33,7 +33,7 @@
     },
     "nsis": {
       "oneClick": false,
-      "guid": "idea",
+      "guid": "veoplayer",
       "perMachine": true,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
