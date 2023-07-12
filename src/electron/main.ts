@@ -1,12 +1,13 @@
 
-import { app, BrowserWindow,Menu,ipcMain,net } from "electron"
+import { app, BrowserWindow,Menu,ipcMain,net,Tray } from "electron"
 import path from 'path'
 import {playFunc} from "./control"
+let win
 const createWindow = () => {
     Menu.setApplicationMenu(null)
     // playFunc(net)
 
-    const win = new BrowserWindow({
+    win = new BrowserWindow({
         width: 1200,
         height: 850,
         minHeight:850,
@@ -43,5 +44,18 @@ const createWindow = () => {
     }
 }
 app.whenReady().then(() => {
+    const tray = new Tray(path.join(__dirname, '../public/static/images/veoplayer_logos.png'))
+    const contextMenu = Menu.buildFromTemplate([
+        {
+            label: '退出',
+            role: 'quit'
+        }
+    ])
+    tray.on('click', () => {
+        win.show()
+    })
+    tray.on('right-click', () => {
+        tray.popUpContextMenu(contextMenu)
+    })
     createWindow()
 })
