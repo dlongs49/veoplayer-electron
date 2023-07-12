@@ -22,6 +22,7 @@ export default defineConfig({
         host: "0.0.0.0"
     },
     build:{
+        outDir:"build",
         rollupOptions:{
             output:{
                 chunkFileNames: 'static/js/[name]-[hash].js',
